@@ -340,38 +340,6 @@
     [
       "51bbc301-ea4a-44e0-84a7-cf42c64443ca",
       ""
-    ],
-    [
-      "3e1dcb04-d5cd-4709-8d55-01e3629ee6cd",
-      "ESP32"
-    ],
-    [
-      "9cb5e054-a8b2-4c7a-8d21-943297e472bd",
-      "Power"
-    ],
-    [
-      "3cad44ae-aa37-4c7c-96e5-8b3fc64ba670",
-      "USB"
-    ],
-    [
-      "2c6c1d5c-fe75-4672-b821-17c5f7376c1f",
-      "CONNECTORS"
-    ],
-    [
-      "7bd22bd8-5206-481e-8608-a65259395027",
-      "ESP_autoboot"
-    ],
-    [
-      "897d0b6f-942d-44e8-8df3-dd254b30a078",
-      "LINEAR_REG"
-    ],
-    [
-      "27d89d7f-0ef2-46e8-afb4-a18c15e39a88",
-      "io_driver"
-    ],
-    [
-      "51220f1a-41fd-4abd-a588-9fb987459fc8",
-      "relays"
     ]
   ],
   "text_variables": {}

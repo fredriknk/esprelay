@@ -474,9 +474,6 @@
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
           (reference "#PWR016") (unit 1)
         )
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca/9cb5e054-a8b2-4c7a-8d21-943297e472bd"
-          (reference "#PWR014") (unit 1)
-        )
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca/2c6c1d5c-fe75-4672-b821-17c5f7376c1f"
           (reference "#PWR014") (unit 1)
         )
@@ -571,9 +568,6 @@
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
           (reference "#PWR01") (unit 1)
         )
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca/9cb5e054-a8b2-4c7a-8d21-943297e472bd"
-          (reference "#PWR011") (unit 1)
-        )
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca/2c6c1d5c-fe75-4672-b821-17c5f7376c1f"
           (reference "#PWR011") (unit 1)
         )
@@ -607,9 +601,6 @@
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
           (reference "#PWR03") (unit 1)
         )
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca/9cb5e054-a8b2-4c7a-8d21-943297e472bd"
-          (reference "#PWR016") (unit 1)
-        )
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca/2c6c1d5c-fe75-4672-b821-17c5f7376c1f"
           (reference "#PWR016") (unit 1)
         )
@@ -642,9 +633,6 @@
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
           (reference "#PWR02") (unit 1)
-        )
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca/9cb5e054-a8b2-4c7a-8d21-943297e472bd"
-          (reference "#PWR013") (unit 1)
         )
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca/2c6c1d5c-fe75-4672-b821-17c5f7376c1f"
           (reference "#PWR013") (unit 1)
@@ -802,9 +790,6 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "J1") (unit 1)
-        )
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca/9cb5e054-a8b2-4c7a-8d21-943297e472bd"
           (reference "J1") (unit 1)
         )
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca/2c6c1d5c-fe75-4672-b821-17c5f7376c1f"

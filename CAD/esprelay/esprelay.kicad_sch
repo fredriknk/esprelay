@@ -339,14 +339,6 @@
           (name "Pin_12" (effects (font (size 1.27 1.27))))
           (number "12" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 5.08 -15.24 180) (length 3.81)
-          (name "Pin_13" (effects (font (size 1.27 1.27))))
-          (number "13" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 5.08 -17.78 180) (length 3.81)
-          (name "Pin_14" (effects (font (size 1.27 1.27))))
-          (number "14" (effects (font (size 1.27 1.27))))
-        )
         (pin passive line (at 5.08 12.7 180) (length 3.81)
           (name "Pin_2" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
@@ -378,6 +370,14 @@
         (pin passive line (at 5.08 -5.08 180) (length 3.81)
           (name "Pin_9" (effects (font (size 1.27 1.27))))
           (number "9" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 -15.24 180) (length 3.81)
+          (name "Pin_13" (effects (font (size 1.27 1.27))))
+          (number "MP" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 -17.78 180) (length 3.81)
+          (name "Pin_14" (effects (font (size 1.27 1.27))))
+          (number "MP" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -2826,6 +2826,9 @@
     (property "Sim.Pins" "1=K 2=A" (at 40.64 152.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C2128" (at 40.64 152.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid cfe9e38e-bdd1-40d0-80f9-5baff8a97e4e))
     (pin "2" (uuid 2eb5a7b3-6c4c-4f37-93ab-09bae8e20955))
     (instances
@@ -2850,6 +2853,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 175.26 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C25804" (at 175.26 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 836f372c-cf4c-4460-ab7f-d4c9870405e8))
@@ -2903,6 +2909,9 @@
     (property "Datasheet" "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf" (at 85.09 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C80087" (at 85.09 176.53 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid bee1a584-ae76-459d-b524-6e4b2c53956e))
     (pin "2" (uuid 2936b5ba-12c3-4176-90a4-dc3c806e54d1))
     (pin "3" (uuid c77cc2b5-bb31-43b5-abd2-93ebb02ef1eb))
@@ -2938,10 +2947,13 @@
     (property "MPN" "CL21A226MOCLRNC" (at 63.5 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "INFO" "DIGIKEY" (at 63.5 100.33 0)
+    (property "INFO" "" (at 63.5 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Supplier Part Number" "1276-6780-6-ND" (at 63.5 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C96446 " (at 63.5 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f4b091ea-5d89-4c97-85d6-e936342019cc))
@@ -2954,7 +2966,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "C3") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -2983,7 +2995,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "FID1") (unit 1)
+          (reference "FID?") (unit 1)
         )
       )
     )
@@ -2992,7 +3004,7 @@
   (symbol (lib_id "power:VBUS") (at 129.54 152.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1d79ac57-977b-4dbe-a2f9-690dcd3ec7d4)
-    (property "Reference" "#PWR026" (at 129.54 156.21 0)
+    (property "Reference" "#PWR027" (at 129.54 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VBUS" (at 129.54 148.59 0)
@@ -3008,7 +3020,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -3017,7 +3029,7 @@
   (symbol (lib_id "power:+3.3V") (at 180.34 29.21 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 230a09c0-9268-4d49-81c5-b0012a932c5f)
-    (property "Reference" "#PWR032" (at 176.53 29.21 0)
+    (property "Reference" "#PWR033" (at 176.53 29.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 184.15 29.21 90)
@@ -3033,12 +3045,12 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR032") (unit 1)
+          (reference "#PWR033") (unit 1)
         )
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3047,7 +3059,7 @@
   (symbol (lib_id "power:GND") (at 237.49 93.98 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 27a81089-90d1-43e2-a573-c8385f1668cd)
-    (property "Reference" "#PWR038" (at 237.49 100.33 0)
+    (property "Reference" "#PWR039" (at 237.49 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 237.49 99.06 0)
@@ -3063,7 +3075,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR039") (unit 1)
         )
       )
     )
@@ -3100,7 +3112,7 @@
       )
       (project "parasite"
         (path "/922058ca-d09a-45fd-8394-05f3e2c1e03a"
-          (reference "U2") (unit 1)
+          (reference "U?") (unit 1)
         )
       )
     )
@@ -3180,7 +3192,7 @@
       )
       (project "parasite"
         (path "/922058ca-d09a-45fd-8394-05f3e2c1e03a"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3226,6 +3238,9 @@
     (property "Datasheet" "~" (at 177.8 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C25804" (at 177.8 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid c3cb5ec3-0399-4686-bdf8-6abbefea62b2))
     (pin "2" (uuid 3af136da-69d3-4917-b8fc-9b16e78a3448))
     (instances
@@ -3261,7 +3276,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3290,7 +3305,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "FID3") (unit 1)
+          (reference "FID?") (unit 1)
         )
       )
     )
@@ -3320,7 +3335,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3329,7 +3344,7 @@
   (symbol (lib_id "power:GND") (at 204.47 123.19 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3c14e1f0-2fef-4bc7-b5ab-9f73a3e9c9e8)
-    (property "Reference" "#PWR036" (at 210.82 123.19 0)
+    (property "Reference" "#PWR037" (at 210.82 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 208.28 123.19 90)
@@ -3345,7 +3360,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR037") (unit 1)
         )
       )
     )
@@ -3354,7 +3369,7 @@
   (symbol (lib_id "power:GND") (at 196.85 153.67 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3d4947c9-7e8b-49ec-9cf8-40663d774e0f)
-    (property "Reference" "#PWR035" (at 203.2 153.67 0)
+    (property "Reference" "#PWR036" (at 203.2 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 200.66 153.67 90)
@@ -3370,7 +3385,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR036") (unit 1)
         )
       )
     )
@@ -3416,6 +3431,9 @@
     (property "Datasheet" "https://www.exar.com/content/document.ashx?id=22106&languageid=1033&type=Datasheet&partnumber=SPX3819&filename=SPX3819.pdf&part=SPX3819" (at 49.53 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C13417" (at 49.53 99.06 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid e3559d3f-0f20-4612-a31c-aeba8b14fd2c))
     (pin "2" (uuid 6d023832-b8ef-43bb-b73f-a2cd51f44e41))
     (pin "3" (uuid 5724a011-8306-4ad2-8e4f-98f50edaeb12))
@@ -3433,7 +3451,7 @@
   (symbol (lib_id "power:+3.3V") (at 142.24 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 44927ece-2d68-4c75-a4c2-3c688d3a9dc8)
-    (property "Reference" "#PWR027" (at 142.24 119.38 0)
+    (property "Reference" "#PWR028" (at 142.24 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 144.78 114.2999 0)
@@ -3449,12 +3467,12 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3488,7 +3506,7 @@
       )
       (project "parasite"
         (path "/922058ca-d09a-45fd-8394-05f3e2c1e03a"
-          (reference "Q2") (unit 1)
+          (reference "Q?") (unit 1)
         )
       )
     )
@@ -3512,10 +3530,13 @@
     (property "MPN" "CL21A226MOCLRNC" (at 20.32 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "INFO" "DIGIKEY" (at 20.32 127 0)
+    (property "INFO" "" (at 20.32 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Supplier Part Number" "1276-6780-6-ND" (at 20.32 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C96446 " (at 20.32 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b01889eb-64ff-4c65-93f2-7108623f7b87))
@@ -3528,7 +3549,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "C1") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -3552,10 +3573,13 @@
     (property "MPN" "06035C104KAT4A" (at 34.29 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "INFO" "DIGIKEY" (at 34.29 127 0)
+    (property "INFO" "" (at 34.29 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Supplier Part Number" "478-10346-1-ND" (at 34.29 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" " C14663 " (at 34.29 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid cb7107ac-774d-4023-9ef3-f3cd2f9f0749))
@@ -3568,7 +3592,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "C8") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -3577,7 +3601,7 @@
   (symbol (lib_id "power:GND") (at 170.18 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 505f30af-47dd-40bc-98bb-8c361e02e893)
-    (property "Reference" "#PWR031" (at 170.18 91.44 0)
+    (property "Reference" "#PWR032" (at 170.18 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 170.18 90.17 0)
@@ -3593,7 +3617,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR032") (unit 1)
         )
       )
     )
@@ -3602,7 +3626,7 @@
   (symbol (lib_id "Device:R") (at 182.88 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 568a3f7f-deb7-46fd-ab2d-3d1b38b78390)
-    (property "Reference" "R13" (at 181.61 80.01 90)
+    (property "Reference" "R12" (at 181.61 80.01 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 182.88 76.2 90)
@@ -3614,12 +3638,15 @@
     (property "Datasheet" "~" (at 182.88 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C25804" (at 182.88 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 29d51eb3-9d46-47d0-97e5-3f3d1a5cc666))
     (pin "2" (uuid 31e76688-8832-49ce-88d0-83b05d79fd9f))
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R13") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -3628,7 +3655,7 @@
   (symbol (lib_id "Device:R") (at 180.34 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 59c7bfe6-e3b3-4f9a-b625-823a0b951e04)
-    (property "Reference" "R12" (at 179.07 80.01 90)
+    (property "Reference" "R11" (at 179.07 80.01 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 180.34 76.2 90)
@@ -3640,12 +3667,15 @@
     (property "Datasheet" "~" (at 180.34 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C25804" (at 180.34 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 631228dc-141b-422b-937d-e43bbec00681))
     (pin "2" (uuid db4889d2-098b-4e51-9f78-1ec6851f6e7b))
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R12") (unit 1)
+          (reference "R11") (unit 1)
         )
       )
     )
@@ -3692,6 +3722,9 @@
     (property "Datasheet" "~" (at 44.45 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C25804" (at 44.45 31.75 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid f58dd884-c149-44f2-bfae-281c2a55bb3e))
     (pin "2" (uuid 173e0f8c-f3ba-499f-9fda-a3fea913ab92))
     (instances
@@ -3731,7 +3764,7 @@
   (symbol (lib_id "power:+3.3V") (at 129.54 110.49 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6d10c7c1-7e24-4e1b-ad25-6400b83aa0f2)
-    (property "Reference" "#PWR024" (at 129.54 114.3 0)
+    (property "Reference" "#PWR025" (at 129.54 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 132.08 109.2199 0)
@@ -3747,12 +3780,12 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3776,10 +3809,13 @@
     (property "MPN" "CL21A226MOCLRNC" (at 63.5 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "INFO" "DIGIKEY" (at 63.5 127 0)
+    (property "INFO" "" (at 63.5 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Supplier Part Number" "1276-6780-6-ND" (at 63.5 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C96446 " (at 63.5 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c61d1fee-20bb-4d61-933f-16840c0d797e))
@@ -3792,7 +3828,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "C3") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -3841,10 +3877,13 @@
     (property "MPN" "06035C104KAT4A" (at 29.21 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "INFO" "DIGIKEY" (at 29.21 31.75 0)
+    (property "INFO" "" (at 29.21 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Supplier Part Number" "478-10346-1-ND" (at 29.21 31.75 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" " C14663 " (at 29.21 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b1fa5c53-952d-40c6-89f6-240e8ddbdfc3))
@@ -3857,7 +3896,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "C8") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -3866,7 +3905,7 @@
   (symbol (lib_id "power:GND") (at 142.24 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 78655fea-dd8f-4466-9ba3-56c5bec444af)
-    (property "Reference" "#PWR028" (at 142.24 129.54 0)
+    (property "Reference" "#PWR029" (at 142.24 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 142.367 127.5842 0)
@@ -3882,12 +3921,12 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
       (project "parasite"
         (path "/922058ca-d09a-45fd-8394-05f3e2c1e03a"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3896,7 +3935,7 @@
   (symbol (lib_id "power:+3.3V") (at 162.56 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7a852656-870b-4958-a971-9fcf4f7835b0)
-    (property "Reference" "#PWR029" (at 162.56 130.81 0)
+    (property "Reference" "#PWR030" (at 162.56 130.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 165.1 125.7299 0)
@@ -3912,12 +3951,12 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3963,6 +4002,9 @@
     (property "Datasheet" "~" (at 104.14 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C25804" (at 104.14 109.22 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 4a4f4f3b-4c24-46a6-9185-c6e113c8f4b5))
     (pin "2" (uuid 93d3f30c-91fe-4633-8c37-1737cbc9440c))
     (instances
@@ -3998,7 +4040,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -4017,6 +4059,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 162.56 146.05 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C23179" (at 162.56 146.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid db868133-6342-44d4-9774-45d9ceba924e))
@@ -4043,6 +4088,9 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Datasheet" "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf" (at 121.92 176.53 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C80087" (at 121.92 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 3f3ce5ca-38f1-49e6-8497-7e9a45a0bb6b))
@@ -4080,10 +4128,13 @@
     (property "MPN" "06035C104KAT4A" (at 74.93 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "INFO" "DIGIKEY" (at 74.93 100.33 0)
+    (property "INFO" "" (at 74.93 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Supplier Part Number" "478-10346-1-ND" (at 74.93 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" " C14663 " (at 74.93 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 945101f1-65e6-4da6-8be5-a8cdfd5eaf82))
@@ -4096,7 +4147,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "C8") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -4105,7 +4156,7 @@
   (symbol (lib_id "power:GND") (at 162.56 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8d0a3f6f-0049-440b-8e1e-bffd3213a39e)
-    (property "Reference" "#PWR030" (at 162.56 161.29 0)
+    (property "Reference" "#PWR031" (at 162.56 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 162.687 159.3342 0)
@@ -4121,12 +4172,12 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR031") (unit 1)
         )
       )
       (project "parasite"
         (path "/922058ca-d09a-45fd-8394-05f3e2c1e03a"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -4156,7 +4207,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -4165,7 +4216,7 @@
   (symbol (lib_id "power:GND") (at 116.84 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 98e288e0-f584-4a92-a33a-e8d2b2090b40)
-    (property "Reference" "#PWR043" (at 116.84 59.69 0)
+    (property "Reference" "#PWR024" (at 116.84 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 116.84 57.15 90)
@@ -4181,7 +4232,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -4200,6 +4251,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" (at 53.34 52.07 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C82891" (at 62.23 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 977e02cf-7d3e-4d4c-ba8e-606ecb6c7986))
@@ -4251,10 +4305,13 @@
     (property "MPN" "06035C104KAT4A" (at 74.93 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "INFO" "DIGIKEY" (at 74.93 127 0)
+    (property "INFO" "" (at 74.93 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Supplier Part Number" "478-10346-1-ND" (at 74.93 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" " C14663 " (at 74.93 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 98dd7a35-5686-4304-985b-3aac062a228c))
@@ -4267,7 +4324,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "C8") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -4288,12 +4345,13 @@
     (property "Datasheet" "~" (at 191.77 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C265421" (at 191.77 135.89 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid ec16f9f8-f997-4304-92ad-994263d17551))
     (pin "10" (uuid 5276cdc5-9e38-4290-811a-804e8d485896))
     (pin "11" (uuid 4e6a34f5-211a-4c94-b72b-3df6d5556dd2))
     (pin "12" (uuid 03915f97-1021-44fe-8f28-6ec2dc2b8bcb))
-    (pin "13" (uuid fee1db39-a6a9-4a79-902f-d959df2a8f4f))
-    (pin "14" (uuid 87548788-d1a1-4a83-ad62-0a3f3f0997cd))
     (pin "2" (uuid 5f071b06-9421-46e0-bac2-3df580b5c5a1))
     (pin "3" (uuid e84889bd-2ea5-4fdf-824d-34bfe4cf763b))
     (pin "4" (uuid 2bcce365-ee7e-4cc2-875d-853f8108dcca))
@@ -4302,6 +4360,8 @@
     (pin "7" (uuid f1af78da-25ce-4f3b-819a-7ae7001c36a6))
     (pin "8" (uuid c7e3b8e6-c703-4972-b1d8-cfe07ef1be49))
     (pin "9" (uuid df7c23fc-95cd-4d50-9e7e-a5e22ab93973))
+    (pin "MP" (uuid 6aaca521-bd1f-422f-9b70-d5a6b7ceadab))
+    (pin "MP" (uuid 1ee1b73c-7659-4b4f-9b54-e9394e1a9947))
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
@@ -4314,7 +4374,7 @@
   (symbol (lib_id "power:GND") (at 180.34 41.91 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a32af390-7247-4aa2-8aba-9484e8dd064a)
-    (property "Reference" "#PWR033" (at 186.69 41.91 0)
+    (property "Reference" "#PWR034" (at 186.69 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 184.15 41.91 90)
@@ -4330,7 +4390,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR034") (unit 1)
         )
       )
     )
@@ -4360,7 +4420,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -4390,7 +4450,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -4414,10 +4474,13 @@
     (property "MPN" "06035C104KAT4A" (at 142.24 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "INFO" "DIGIKEY" (at 142.24 119.38 0)
+    (property "INFO" "" (at 142.24 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Supplier Part Number" "478-10346-1-ND" (at 142.24 119.38 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" " C14663 " (at 142.24 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 7280130d-f266-4d12-8255-02cbc0db0f40))
@@ -4430,7 +4493,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "C8") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -4454,10 +4517,13 @@
     (property "MPN" "CL21A226MOCLRNC" (at 20.32 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "INFO" "DIGIKEY" (at 20.32 100.33 0)
+    (property "INFO" "" (at 20.32 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Supplier Part Number" "1276-6780-6-ND" (at 20.32 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C96446 " (at 20.32 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 56bc4c89-7270-486b-b4a0-56282294d5ab))
@@ -4470,7 +4536,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "C1") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -4546,6 +4612,9 @@
     (property "Datasheet" "~" (at 172.72 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C25804" (at 172.72 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 6b092f7e-d517-435f-89b1-23feea65d73d))
     (pin "2" (uuid 442855ed-47d7-4f2f-b5b8-16ebc33fb63f))
     (instances
@@ -4581,7 +4650,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -4602,6 +4671,9 @@
     (property "Datasheet" "~" (at 107.95 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C25804" (at 107.95 109.22 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 1e23da7d-e259-4831-adbf-2b62adc6bab9))
     (pin "2" (uuid 9da18c62-9c69-4242-a0a5-091682770a1f))
     (instances
@@ -4616,7 +4688,7 @@
   (symbol (lib_id "power:GND") (at 196.85 151.13 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bfe6c7c0-82c5-4665-9b35-ef871b48362f)
-    (property "Reference" "#PWR034" (at 203.2 151.13 0)
+    (property "Reference" "#PWR035" (at 203.2 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 200.66 151.13 90)
@@ -4632,7 +4704,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR035") (unit 1)
         )
       )
     )
@@ -4651,6 +4723,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 170.18 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C25804" (at 170.18 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c853ad10-658f-4b31-8110-ee7b8199e3bd))
@@ -4677,6 +4752,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.exar.com/content/document.ashx?id=22106&languageid=1033&type=Datasheet&partnumber=SPX3819&filename=SPX3819.pdf&part=SPX3819" (at 49.53 125.73 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C9055" (at 49.53 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e229d902-1128-4bb6-92b2-d34c4d1bc929))
@@ -4716,7 +4794,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "FID2") (unit 1)
+          (reference "FID?") (unit 1)
         )
       )
     )
@@ -4725,7 +4803,7 @@
   (symbol (lib_id "power:GND") (at 129.54 129.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ce96b720-add7-4d6e-b356-e2f12348ad76)
-    (property "Reference" "#PWR025" (at 129.54 135.89 0)
+    (property "Reference" "#PWR026" (at 129.54 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 129.667 133.9342 0)
@@ -4741,12 +4819,12 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
       (project "parasite"
         (path "/922058ca-d09a-45fd-8394-05f3e2c1e03a"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -4755,7 +4833,7 @@
   (symbol (lib_id "power:+VDC") (at 205.74 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cec9245d-603d-4230-9fac-3d5b1660d607)
-    (property "Reference" "#PWR037" (at 205.74 123.19 0)
+    (property "Reference" "#PWR038" (at 205.74 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+VDC" (at 205.74 113.03 0)
@@ -4771,7 +4849,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR038") (unit 1)
         )
       )
     )
@@ -4801,7 +4879,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -4820,6 +4898,9 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Datasheet" "http://www.ti.com/lit/ds/symlink/uln2003a.pdf" (at 240.03 83.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C7512" (at 237.49 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 97123e59-77ef-4f62-b9fc-e65551e728aa))
@@ -4862,7 +4943,10 @@
     (property "Datasheet" "~" (at 116.84 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LSC" "C231329" (at 116.84 48.26 0)
+    (property "LSC" "" (at 116.84 48.26 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C231329" (at 116.84 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d980afc2-59a8-431f-abaf-2480d058c64e))
@@ -4900,7 +4984,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -4924,10 +5008,13 @@
     (property "MPN" "06035C104KAT4A" (at 34.29 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "INFO" "DIGIKEY" (at 34.29 100.33 0)
+    (property "INFO" "" (at 34.29 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Supplier Part Number" "478-10346-1-ND" (at 34.29 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" " C14663 " (at 34.29 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 0230c41e-4de9-4011-a220-9ebaf72dddbe))
@@ -4940,7 +5027,7 @@
       )
       (project "opengeiger"
         (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "C8") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -4984,6 +5071,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 78.74 34.29 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C25804" (at 78.74 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f37ffbd7-228f-4a2e-982a-977a1bed63a4))
@@ -5035,6 +5125,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 95.25 44.45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C25804" (at 95.25 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d5ca7ee5-8bf0-4d77-86d7-fae0890a10f9))
@@ -5094,6 +5187,9 @@
     (property "Sim.Pins" "1=K 2=A" (at 121.92 152.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C2128" (at 121.92 152.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 41791790-fd6d-4dac-9feb-0ddc9ae0a519))
     (pin "2" (uuid d97bacea-cdaf-415b-aaf6-e30523451762))
     (instances
@@ -5126,6 +5222,9 @@
     (property "Sim.Pins" "1=K 2=A" (at 85.09 152.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C2128" (at 85.09 152.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 73f23728-ab97-4c9e-802b-5e5ad93eb2b3))
     (pin "2" (uuid ea0039dd-d400-4d25-9817-e68a59e30938))
     (instances
@@ -5150,6 +5249,9 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Datasheet" "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf" (at 40.64 176.53 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C80087" (at 40.64 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f55d608b-fb4a-4685-b437-e220d24bb8b2))

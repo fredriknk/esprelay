@@ -723,41 +723,6 @@
         )
       )
     )
-    (symbol "Mechanical:MountingHole_Pad" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "H" (at 0 6.35 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "MountingHole_Pad" (at 0 4.445 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "mounting hole" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Mounting Hole with connection" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "MountingHole*Pad*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "MountingHole_Pad_0_1"
-        (circle (center 0 1.27) (radius 1.27)
-          (stroke (width 1.27) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "MountingHole_Pad_1_1"
-        (pin input line (at 0 -2.54 90) (length 2.54)
-          (name "1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "RF_Module:ESP-12F" (in_bom yes) (on_board yes)
       (property "Reference" "U" (at -12.7 19.05 0)
         (effects (font (size 1.27 1.27)) (justify left))
@@ -1300,6 +1265,54 @@
         )
       )
     )
+    (symbol "Switch:SW_SPST" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "SW" (at 0 3.175 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "SW_SPST" (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "switch lever" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Single Pole Single Throw (SPST) switch" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "SW_SPST_0_0"
+        (circle (center -2.032 0) (radius 0.508)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.524 0.254)
+            (xy 1.524 1.778)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 2.032 0) (radius 0.508)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "SW_SPST_1_1"
+        (pin passive line (at -5.08 0 0) (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 0 180) (length 2.54)
+          (name "B" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Transistor_Array:ULN2003A" (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 0 15.875 0)
         (effects (font (size 1.27 1.27)))
@@ -1712,16 +1725,13 @@
   (junction (at 34.29 130.81) (diameter 0) (color 0 0 0 0)
     (uuid 819a729f-1bae-4e15-94e4-612f5be98443)
   )
-  (junction (at 180.34 82.55) (diameter 0) (color 0 0 0 0)
-    (uuid 85876755-912e-4698-8a04-adf16a3f65aa)
-  )
   (junction (at 41.91 123.19) (diameter 0) (color 0 0 0 0)
     (uuid 88fdf26a-264a-4869-881f-4bb5f5d85228)
   )
   (junction (at 74.93 123.19) (diameter 0) (color 0 0 0 0)
     (uuid 9345b045-adfb-44c0-9e08-7bdc636c6a1f)
   )
-  (junction (at 182.88 82.55) (diameter 0) (color 0 0 0 0)
+  (junction (at 180.34 82.55) (diameter 0) (color 0 0 0 0)
     (uuid 9c54608e-0019-418d-bfb5-a8a268c12cdb)
   )
   (junction (at 20.32 96.52) (diameter 0) (color 0 0 0 0)
@@ -1854,6 +1864,10 @@
     (stroke (width 0) (type default))
     (uuid 2d036d69-1cfa-46dc-9724-2b0729297b96)
   )
+  (wire (pts (xy 227.33 73.66) (xy 227.33 76.2))
+    (stroke (width 0) (type default))
+    (uuid 2dbd38ee-5ef1-493f-9bdc-94e7d070cc8f)
+  )
   (wire (pts (xy 107.95 121.92) (xy 107.95 124.46))
     (stroke (width 0) (type default))
     (uuid 2e2a4f08-4d87-4c35-b6c0-ab5238e0148f)
@@ -1874,10 +1888,6 @@
   (wire (pts (xy 162.56 149.86) (xy 162.56 154.94))
     (stroke (width 0) (type default))
     (uuid 42fcbd14-8f8d-49d5-8ca1-2e83cda61994)
-  )
-  (wire (pts (xy 247.65 81.28) (xy 247.65 83.82))
-    (stroke (width 0) (type default))
-    (uuid 430cdf5b-4804-4dba-9d58-d1dfb17b2b85)
   )
   (polyline (pts (xy 92.71 83.82) (xy 16.51 83.82))
     (stroke (width 0) (type default))
@@ -1900,6 +1910,10 @@
     (stroke (width 0) (type default))
     (uuid 4e56d580-76bb-46d5-b6cd-46f0383b49f1)
   )
+  (wire (pts (xy 247.65 73.66) (xy 247.65 76.2))
+    (stroke (width 0) (type default))
+    (uuid 4f65054e-e386-4035-b47a-8c16edc6d338)
+  )
   (polyline (pts (xy 92.71 83.82) (xy 92.71 140.97))
     (stroke (width 0) (type default))
     (uuid 53294ec5-fa56-4df4-a079-4d6dcffb371c)
@@ -1909,7 +1923,7 @@
     (stroke (width 0) (type default))
     (uuid 57678d12-d7ef-404b-a627-63d5bf1431ae)
   )
-  (wire (pts (xy 185.42 77.47) (xy 185.42 82.55))
+  (wire (pts (xy 182.88 77.47) (xy 182.88 82.55))
     (stroke (width 0) (type default))
     (uuid 5890e0ff-6743-4a5b-9664-1e88b3ca5ed0)
   )
@@ -2035,11 +2049,7 @@
     (stroke (width 0) (type default))
     (uuid 8d70364e-2c84-41c3-b5e8-26bfafd79d01)
   )
-  (wire (pts (xy 227.33 83.82) (xy 227.33 81.28))
-    (stroke (width 0) (type default))
-    (uuid 8f0469be-d4de-4838-9273-44e36a7e25ed)
-  )
-  (wire (pts (xy 182.88 82.55) (xy 185.42 82.55))
+  (wire (pts (xy 180.34 82.55) (xy 182.88 82.55))
     (stroke (width 0) (type default))
     (uuid 901ea37d-4f41-44b8-ae33-fba9836f6839)
   )
@@ -2266,14 +2276,6 @@
     (stroke (width 0) (type default))
     (uuid ead325ca-3367-45cd-a743-a648dae7b23c)
   )
-  (wire (pts (xy 180.34 77.47) (xy 180.34 82.55))
-    (stroke (width 0) (type default))
-    (uuid ec00998a-ef2b-45d7-a6f7-96d85a385337)
-  )
-  (wire (pts (xy 180.34 82.55) (xy 182.88 82.55))
-    (stroke (width 0) (type default))
-    (uuid ef88783d-a646-4632-a251-2b25e00a0ad4)
-  )
   (polyline (pts (xy 152.4 140.97) (xy 93.98 140.97))
     (stroke (width 0) (type default))
     (uuid f026679d-98ba-465a-ba0a-5530ecb2e011)
@@ -2301,7 +2303,7 @@
     (uuid fbc7aa31-8ffb-4df1-b217-f1305f3e763c)
   )
 
-  (wire (pts (xy 182.88 77.47) (xy 182.88 82.55))
+  (wire (pts (xy 180.34 77.47) (xy 180.34 82.55))
     (stroke (width 0) (type default))
     (uuid fd6c62fb-99b8-4ec1-81dd-06fbf0a36469)
   )
@@ -2343,32 +2345,25 @@
     (uuid effb9fc0-abe4-4df6-9b8e-4c487db29023)
   )
 
-  (global_label "HRO2" (shape input) (at 247.65 76.2 0) (fields_autoplaced)
+  (global_label "GPIO4" (shape input) (at 247.65 86.36 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 083bc2a3-d267-4cd1-8187-087336a4f6e6)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 255.7757 76.2 0)
+    (uuid 11798cc7-e50e-428f-a094-5ef85462aae3)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 256.32 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "LRO1" (shape input) (at 170.18 69.85 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 121d6a77-4b36-4baa-9cce-a0fc35a1d1b8)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 170.18 62.0267 90)
+  (global_label "HI2" (shape input) (at 227.33 88.9 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 166119d9-5443-46fe-a272-51a51d136941)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 221.2 88.9 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "HRO3" (shape input) (at 114.3 166.37 180) (fields_autoplaced)
+  (global_label "RO3" (shape input) (at 114.3 166.37 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 16e37af3-42f0-419c-a78a-747550ba26fd)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 106.1743 166.37 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 107.5048 166.37 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "HRO1" (shape input) (at 247.65 73.66 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 193670ab-9621-4fbc-840a-b6b73785f0d1)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 255.7757 73.66 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
   (global_label "TX" (shape input) (at 77.47 41.91 0) (fields_autoplaced)
@@ -2385,10 +2380,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "HRO3" (shape input) (at 247.65 78.74 0) (fields_autoplaced)
+  (global_label "HI2" (shape input) (at 196.85 128.27 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 1ba0237b-9b39-42fb-8251-83581158cbf9)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 255.7757 78.74 0)
+    (uuid 1b98f19c-3667-47ea-bbbf-8aeb4c4b4305)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 202.98 128.27 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2399,17 +2394,24 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "HRO1" (shape input) (at 33.02 166.37 180) (fields_autoplaced)
+  (global_label "RO1" (shape input) (at 33.02 166.37 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 2044b9be-17ab-46f5-8234-5219205f58f8)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 24.8943 166.37 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 26.2248 166.37 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "LI07" (shape input) (at 77.47 52.07 0) (fields_autoplaced)
+  (global_label "GPIO14" (shape input) (at 227.33 81.28 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 2098aa9e-5549-49a0-a61f-a0595d1f89f0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 217.4505 81.28 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
+  (global_label "GPIO15" (shape input) (at 77.47 62.23 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 23fe4ea1-53a0-4985-a330-a3f246affba1)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 84.5071 52.07 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 87.3495 62.23 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2417,6 +2419,13 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 258e0790-a357-46a3-a439-bb3ee2ddc404)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 141.4152 173.99 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "HI1" (shape input) (at 196.85 125.73 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 26d69ecd-a418-4933-86ac-b9992275f0b6)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 202.98 125.73 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2455,17 +2464,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "LRO2" (shape input) (at 227.33 76.2 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 422e672f-2843-45cc-af55-e8d74b0dab2d)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 219.5067 76.2 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "HPO45" (shape input) (at 196.85 125.73 0) (fields_autoplaced)
+  (global_label "GPIO13" (shape input) (at 170.18 69.85 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 484b6758-23fc-42f2-b82d-3e667284bfbe)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 206.1852 125.73 0)
+    (uuid 455fda9e-f500-4571-87af-9a5f2da1e897)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 170.18 59.9705 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2490,10 +2492,24 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
+  (global_label "HO1" (shape input) (at 196.85 130.81 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 5a45e673-8a2a-4a17-b72c-79c2883124f4)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 203.7057 130.81 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
   (global_label "BOOT" (shape input) (at 78.74 39.37 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 5ac58175-58d7-4c07-bd49-8675c9445d32)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 86.6238 39.37 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "HO1" (shape input) (at 247.65 73.66 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 5ad9adb3-68e5-4818-9768-59ff64adc3e6)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 254.5057 73.66 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2511,13 +2527,6 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "LR03" (shape input) (at 227.33 78.74 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 66f5f914-a781-4a0d-8e90-aac93641f766)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 219.6277 78.74 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
   (global_label "R1NO" (shape input) (at 50.8 189.23 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 68064f61-3a7f-4faf-ae80-f8f07fb296c6)
@@ -2532,24 +2541,24 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "R2NC" (shape input) (at 196.85 143.51 0) (fields_autoplaced)
+  (global_label "R2NO" (shape input) (at 196.85 143.51 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 6f2d8993-f7d9-4fe4-b0b4-5d84761f1e10)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 204.9152 143.51 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 204.9757 143.51 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "LPO5" (shape input) (at 180.34 69.85 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 73a11812-338b-4e60-b4de-ca3fb6b17d44)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 180.34 62.0267 90)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
+  (global_label "GPIO12" (shape input) (at 227.33 78.74 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 75c7a086-970c-4d67-b477-c583adc45e60)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 217.4505 78.74 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "HP45" (shape input) (at 247.65 81.28 0) (fields_autoplaced)
+  (global_label "RO3" (shape input) (at 247.65 83.82 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 7fea2bc1-9abd-4708-84df-e125e336b6a2)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 255.6547 81.28 0)
+    (uuid 88449a60-e4cd-4a00-9ff1-7f35b89189d8)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 254.4452 83.82 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2567,10 +2576,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "LP45" (shape input) (at 77.47 49.53 0) (fields_autoplaced)
+  (global_label "GPIO5" (shape input) (at 77.47 52.07 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 89e6348f-8404-4b27-a65a-740d06ec0e28)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 85.1723 49.53 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 86.14 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2581,6 +2590,13 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
+  (global_label "GPIO15" (shape input) (at 247.65 88.9 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 8a895481-947f-45ea-97fc-52fcea9b1a0c)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 257.5295 88.9 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
   (global_label "RST" (shape input) (at 77.47 64.77 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 8bcad1cb-b1b4-489e-a1c7-c4415a6e364a)
@@ -2588,10 +2604,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "HI07" (shape input) (at 182.88 69.85 90) (fields_autoplaced)
+  (global_label "HI1" (shape input) (at 182.88 69.85 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 8daff31c-1d62-4fcd-858f-8320012895ac)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 182.88 62.5105 90)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 182.88 63.72 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2602,24 +2618,31 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "HI06" (shape input) (at 185.42 69.85 90) (fields_autoplaced)
+  (global_label "HI2" (shape input) (at 180.34 69.85 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 8fe1945e-8b9a-489a-b6d2-7a52d1d36e53)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 185.42 62.5105 90)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 180.34 63.72 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "LRO2" (shape input) (at 77.47 59.69 0) (fields_autoplaced)
+  (global_label "RO1" (shape input) (at 247.65 78.74 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 8ff3e2fd-3752-4b03-83d0-b5a889a8aae1)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 254.4452 78.74 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "RO2" (shape input) (at 247.65 81.28 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 9248e0ce-5eb6-4655-9e48-b700c5d9f1a8)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 254.4452 81.28 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "GPIO12" (shape input) (at 77.47 54.61 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 94bc15c5-be6a-4a1e-9795-314f83821c0b)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 85.2933 59.69 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "HI06" (shape input) (at 196.85 128.27 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 95ca28ea-a3c3-47a4-8d77-0422ca935ddb)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 204.1895 128.27 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 87.3495 54.61 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2630,10 +2653,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "LRO1" (shape input) (at 77.47 62.23 0) (fields_autoplaced)
+  (global_label "GPIO13" (shape input) (at 77.47 57.15 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 9df43f3e-bc5b-4ef1-b943-8b1dfc1bd35e)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 85.2933 62.23 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 87.3495 57.15 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2648,27 +2671,6 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid a0c39eae-6277-4c8c-926f-53855fe05f55)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 108.0294 130.3523 90)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "LR03" (shape input) (at 175.26 69.85 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid a1ce71e3-17ac-4f98-83b1-9440cb96d3b6)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 175.26 62.1477 90)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "LRO2" (shape input) (at 172.72 69.85 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid a51d3a1d-a8b2-4067-a098-0a041d175ff7)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 172.72 62.0267 90)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "LP45" (shape input) (at 227.33 81.28 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid afcb4ea2-32be-4805-8cff-7408c2d3c773)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 219.6277 81.28 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -2693,52 +2695,38 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "LI06" (shape input) (at 247.65 86.36 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid c562bfa8-62fc-4076-bb11-15c443d6e981)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 254.6871 86.36 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "LR03" (shape input) (at 77.47 57.15 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid c8d4b8af-05d5-45e6-be82-276d27434048)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 85.1723 57.15 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "LI07" (shape input) (at 247.65 88.9 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid c92e5ec1-1633-42dc-a963-7f9ce0190a61)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 254.6871 88.9 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "LPO4" (shape input) (at 177.8 69.85 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid c9a108a4-42d0-4ced-be22-267df6ab1223)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 177.8 62.0267 90)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "HI07" (shape input) (at 227.33 88.9 180) (fields_autoplaced)
+  (global_label "HI1" (shape input) (at 227.33 86.36 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid cbf97562-cf99-455f-ad47-60a759e911b7)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 219.9905 88.9 0)
+    (uuid c51becc2-a301-40e1-b058-10d760d10195)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 221.2 86.36 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "LI06" (shape input) (at 77.47 54.61 0) (fields_autoplaced)
+  (global_label "GPIO12" (shape input) (at 172.72 69.85 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid d0e47a8a-846e-4e8f-acd5-0ee2a60b767d)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 84.5071 54.61 0)
+    (uuid c8bded92-9a55-4d2c-a272-a2d131352d42)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 172.72 59.9705 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "HRO2" (shape input) (at 77.47 166.37 180) (fields_autoplaced)
+  (global_label "GPIO14" (shape input) (at 77.47 59.69 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid c8d4b8af-05d5-45e6-be82-276d27434048)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 87.3495 59.69 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "GPIO4" (shape input) (at 77.47 49.53 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid d0e47a8a-846e-4e8f-acd5-0ee2a60b767d)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 86.14 49.53 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "RO2" (shape input) (at 77.47 166.37 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid d73d9041-3308-4acc-9a8b-13ce557e4b9b)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 69.3443 166.37 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 70.6748 166.37 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -2756,24 +2744,38 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "LRO1" (shape input) (at 227.33 73.66 180) (fields_autoplaced)
+  (global_label "GPIO13" (shape input) (at 227.33 73.66 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid dfd97c1a-32db-429c-9467-1b56a7796ef8)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 219.5067 73.66 0)
+    (uuid dc809a47-2702-44b8-8c0a-cab6c3ce7b1c)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 217.4505 73.66 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "HI07" (shape input) (at 196.85 130.81 0) (fields_autoplaced)
+  (global_label "BOOT" (shape input) (at 116.84 43.18 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid e181c169-b0aa-4f14-9d2e-6f30828c45b0)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 204.1895 130.81 0)
+    (uuid dcd38143-54e1-4f3c-b0cd-740d010c3759)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 116.84 35.2962 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "HI06" (shape input) (at 227.33 86.36 180) (fields_autoplaced)
+  (global_label "GPIO5" (shape input) (at 177.8 69.85 90) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid e48b073e-480c-4cce-ab91-5c348955e73b)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 177.8 61.18 90)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "GPIO14" (shape input) (at 175.26 69.85 90) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid e73ce1a7-40bb-431e-bdaa-1fa68d160017)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 175.26 59.9705 90)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "GPIO5" (shape input) (at 227.33 83.82 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid f90339b5-0b1a-4351-bea2-41bf30c87477)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 219.9905 86.36 0)
+    (uuid e80a20f5-c479-471a-8fd4-efabf1f1a239)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 218.66 83.82 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -2781,7 +2783,7 @@
   (symbol (lib_id "power:GND") (at 34.29 130.81 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 00cad4f0-b1b0-4cb7-afbc-5fa8bc1a4124)
-    (property "Reference" "#PWR02" (at 34.29 137.16 0)
+    (property "Reference" "#PWR06" (at 34.29 137.16 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 34.29 135.89 0)
@@ -2797,7 +2799,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -2806,7 +2808,7 @@
   (symbol (lib_id "Diode:1N4148WS") (at 40.64 152.4 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0529e054-23f1-4e2a-8b95-c81a4cda32cc)
-    (property "Reference" "D2" (at 40.64 146.05 0)
+    (property "Reference" "D1" (at 40.64 146.05 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1N4148WS" (at 40.64 148.59 0)
@@ -2829,7 +2831,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "D2") (unit 1)
+          (reference "D1") (unit 1)
         )
       )
     )
@@ -2838,7 +2840,7 @@
   (symbol (lib_id "Device:R") (at 175.26 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 130b5e75-25fb-4e5b-89f8-53ab6d2d5607)
-    (property "Reference" "R3" (at 173.99 80.01 90)
+    (property "Reference" "R9" (at 173.99 80.01 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 175.26 76.2 90)
@@ -2855,7 +2857,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R3") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -2864,7 +2866,7 @@
   (symbol (lib_id "power:VBUS") (at 69.85 114.3 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1462ef20-fdbe-403b-9310-5b38d079bbc8)
-    (property "Reference" "#PWR08" (at 73.66 114.3 0)
+    (property "Reference" "#PWR016" (at 73.66 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VBUS" (at 66.04 114.3 90)
@@ -2880,7 +2882,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -2921,7 +2923,7 @@
   (symbol (lib_id "Device:C") (at 63.5 100.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1511778c-d05e-4d00-bd70-3d02974f4ae0)
-    (property "Reference" "C9" (at 67.31 99.0599 0)
+    (property "Reference" "C6" (at 67.31 99.0599 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22uF" (at 67.31 101.5999 0)
@@ -2947,7 +2949,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "C9") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
       (project "opengeiger"
@@ -2990,7 +2992,7 @@
   (symbol (lib_id "power:VBUS") (at 129.54 152.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1d79ac57-977b-4dbe-a2f9-690dcd3ec7d4)
-    (property "Reference" "#PWR0102" (at 129.54 156.21 0)
+    (property "Reference" "#PWR026" (at 129.54 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VBUS" (at 129.54 148.59 0)
@@ -3006,7 +3008,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR0102") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -3015,7 +3017,7 @@
   (symbol (lib_id "power:+3.3V") (at 180.34 29.21 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 230a09c0-9268-4d49-81c5-b0012a932c5f)
-    (property "Reference" "#PWR013" (at 176.53 29.21 0)
+    (property "Reference" "#PWR032" (at 176.53 29.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 184.15 29.21 90)
@@ -3031,7 +3033,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR032") (unit 1)
         )
       )
       (project "opengeiger"
@@ -3045,7 +3047,7 @@
   (symbol (lib_id "power:GND") (at 237.49 93.98 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 27a81089-90d1-43e2-a573-c8385f1668cd)
-    (property "Reference" "#PWR07" (at 237.49 100.33 0)
+    (property "Reference" "#PWR038" (at 237.49 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 237.49 99.06 0)
@@ -3061,7 +3063,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR038") (unit 1)
         )
       )
     )
@@ -3070,16 +3072,16 @@
   (symbol (lib_id "Sensor_Humidity:SHTC3") (at 127 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2a342b5a-b003-4c4c-87ca-6cde6469da9d)
-    (property "Reference" "U3" (at 133.1976 118.2116 0)
+    (property "Reference" "U4" (at 133.1976 118.2116 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SHTC3" (at 133.1976 120.523 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "kicad:Sensirion_DFN-4-1EP_2x2mm_P1mm_EP0.7x1.6mm" (at 132.08 128.27 0)
+    (property "Footprint" "Sensor_Humidity:Sensirion_DFN-4-1EP_2x2mm_P1mm_EP0.7x1.6mm" (at 132.08 128.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "https://sensirion.com/media/documents/643F9C8E/63A5A436/Datasheet_SHTC3.pdf" (at 119.38 107.95 0)
+    (property "Datasheet" "https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/0_Datasheets/Humidity/Sensirion_Humidity_Sensors_SHTC3_Datasheet.pdf" (at 119.38 107.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "LCSC" "C194656" (at 127 119.38 0)
@@ -3093,7 +3095,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "U3") (unit 1)
+          (reference "U4") (unit 1)
         )
       )
       (project "parasite"
@@ -3107,7 +3109,7 @@
   (symbol (lib_id "power:VBUS") (at 48.26 152.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2b752c9a-5d77-481b-8bc5-fdcfd0ab1bbf)
-    (property "Reference" "#PWR0101" (at 48.26 156.21 0)
+    (property "Reference" "#PWR09" (at 48.26 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VBUS" (at 48.26 148.59 0)
@@ -3123,7 +3125,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR0101") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -3132,7 +3134,7 @@
   (symbol (lib_id "power:GND") (at 34.29 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 30fb8406-029d-41bd-8d54-0b9ccc8ba09a)
-    (property "Reference" "#PWR015" (at 34.29 110.49 0)
+    (property "Reference" "#PWR05" (at 34.29 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 34.29 109.22 0)
@@ -3148,7 +3150,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -3157,7 +3159,7 @@
   (symbol (lib_id "power:GND") (at 29.21 35.56 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 31628355-04b7-4873-8e71-bb2989295cf5)
-    (property "Reference" "#PWR032" (at 29.21 41.91 0)
+    (property "Reference" "#PWR04" (at 29.21 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 29.337 39.9542 0)
@@ -3173,7 +3175,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR032") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
       (project "parasite"
@@ -3187,7 +3189,7 @@
   (symbol (lib_id "power:GND") (at 62.23 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 321ea182-705a-4167-a76d-59a92dd2354c)
-    (property "Reference" "#PWR036" (at 62.23 78.74 0)
+    (property "Reference" "#PWR013" (at 62.23 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 62.23 77.47 0)
@@ -3203,7 +3205,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -3212,7 +3214,7 @@
   (symbol (lib_id "Device:R") (at 177.8 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 39d613ae-c142-4ae6-8e8e-f0d857ed6f69)
-    (property "Reference" "R4" (at 176.53 80.01 90)
+    (property "Reference" "R10" (at 176.53 80.01 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 177.8 76.2 90)
@@ -3229,7 +3231,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R4") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -3238,7 +3240,7 @@
   (symbol (lib_id "power:+3.3V") (at 74.93 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3a066310-cde1-4cbe-b152-84047d5be403)
-    (property "Reference" "#PWR05" (at 74.93 127 0)
+    (property "Reference" "#PWR018" (at 74.93 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 77.47 121.9199 0)
@@ -3254,7 +3256,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
       (project "opengeiger"
@@ -3268,7 +3270,7 @@
   (symbol (lib_id "Mechanical:Fiducial") (at 238.76 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3a7cae62-9bb7-4b9b-96ac-3abd895fccc2)
-    (property "Reference" "FID3" (at 241.3 153.6699 0)
+    (property "Reference" "FID2" (at 241.3 153.6699 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Fiducial" (at 241.3 156.2099 0)
@@ -3283,7 +3285,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "FID3") (unit 1)
+          (reference "FID2") (unit 1)
         )
       )
       (project "opengeiger"
@@ -3297,7 +3299,7 @@
   (symbol (lib_id "power:+3.3V") (at 46.99 44.45 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3c13db85-9d0a-4faf-8197-03551b5e6fc4)
-    (property "Reference" "#PWR033" (at 50.8 44.45 0)
+    (property "Reference" "#PWR08" (at 50.8 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 43.18 44.45 90)
@@ -3313,7 +3315,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
       (project "opengeiger"
@@ -3327,7 +3329,7 @@
   (symbol (lib_id "power:GND") (at 204.47 123.19 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3c14e1f0-2fef-4bc7-b5ab-9f73a3e9c9e8)
-    (property "Reference" "#PWR020" (at 210.82 123.19 0)
+    (property "Reference" "#PWR036" (at 210.82 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 208.28 123.19 90)
@@ -3343,7 +3345,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR036") (unit 1)
         )
       )
     )
@@ -3352,7 +3354,7 @@
   (symbol (lib_id "power:GND") (at 196.85 153.67 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3d4947c9-7e8b-49ec-9cf8-40663d774e0f)
-    (property "Reference" "#PWR038" (at 203.2 153.67 0)
+    (property "Reference" "#PWR035" (at 203.2 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 200.66 153.67 90)
@@ -3368,7 +3370,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR035") (unit 1)
         )
       )
     )
@@ -3377,7 +3379,7 @@
   (symbol (lib_id "power:GND") (at 49.53 133.35 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3e2989af-c6d1-4a09-9118-cf6e7c35c7a6)
-    (property "Reference" "#PWR06" (at 49.53 139.7 0)
+    (property "Reference" "#PWR011" (at 49.53 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 49.53 138.43 0)
@@ -3393,7 +3395,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -3402,7 +3404,7 @@
   (symbol (lib_id "Regulator_Linear:SPX3819M5-L-5-0") (at 49.53 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 43b82449-0359-4d56-9c83-c4ba67485e8d)
-    (property "Reference" "U4" (at 49.53 90.17 0)
+    (property "Reference" "U1" (at 49.53 90.17 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SPX3819M5-L-5-0" (at 49.53 92.71 0)
@@ -3422,7 +3424,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "U4") (unit 1)
+          (reference "U1") (unit 1)
         )
       )
     )
@@ -3431,7 +3433,7 @@
   (symbol (lib_id "power:+3.3V") (at 142.24 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 44927ece-2d68-4c75-a4c2-3c688d3a9dc8)
-    (property "Reference" "#PWR023" (at 142.24 119.38 0)
+    (property "Reference" "#PWR027" (at 142.24 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 144.78 114.2999 0)
@@ -3447,7 +3449,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
       (project "opengeiger"
@@ -3467,10 +3469,10 @@
     (property "Value" "Q_Photo_NPN" (at 164.846 134.493 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "snapeda:TR8" (at 165.1 130.81 0)
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric" (at 165.1 130.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "https://datasheet.lcsc.com/lcsc/1806131537_Everlight-Elec-ALS-PT19-315C-L177-TR8_C146233.pdf" (at 160.02 133.35 0)
+    (property "Datasheet" "~" (at 160.02 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "LCSC" "C146233" (at 160.02 133.35 0)
@@ -3495,7 +3497,7 @@
   (symbol (lib_id "Device:C") (at 20.32 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 46a83bd8-13b0-4707-9d9d-299449cf50ce)
-    (property "Reference" "C4" (at 24.13 125.7299 0)
+    (property "Reference" "C2" (at 24.13 125.7299 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22uF" (at 24.13 128.2699 0)
@@ -3521,7 +3523,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "C4") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
       (project "opengeiger"
@@ -3535,7 +3537,7 @@
   (symbol (lib_id "Device:C") (at 34.29 127 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4700ed81-a9e6-4226-80a5-c212a03998a7)
-    (property "Reference" "C1" (at 38.1 125.73 0)
+    (property "Reference" "C5" (at 38.1 125.73 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "0.1uF" (at 38.1 128.27 0)
@@ -3561,7 +3563,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "C1") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
       (project "opengeiger"
@@ -3572,35 +3574,10 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 246.38 116.84 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 4acc9bf3-3800-488c-9542-4b2c57e46354)
-    (property "Reference" "#PWR03" (at 246.38 123.19 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 246.38 121.92 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 246.38 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 246.38 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 37391826-d3d4-4909-928c-06421c131f3c))
-    (instances
-      (project "esprelay"
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR03") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 170.18 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 505f30af-47dd-40bc-98bb-8c361e02e893)
-    (property "Reference" "#PWR021" (at 170.18 91.44 0)
+    (property "Reference" "#PWR031" (at 170.18 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 170.18 90.17 0)
@@ -3616,59 +3593,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR021") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 180.34 73.66 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 524a313a-9841-48ec-918a-51ad183aa9c8)
-    (property "Reference" "R5" (at 179.07 80.01 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "10K" (at 180.34 76.2 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 178.562 73.66 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 180.34 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid e36d7f05-b9a4-4a6c-999d-293d7b713e9c))
-    (pin "2" (uuid 58e8c7fd-2ee4-43b4-aa4b-3cae67063346))
-    (instances
-      (project "esprelay"
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R5") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 185.42 73.66 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 568a3f7f-deb7-46fd-ab2d-3d1b38b78390)
-    (property "Reference" "R7" (at 184.15 80.01 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "10K" (at 185.42 76.2 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 183.642 73.66 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 185.42 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 29d51eb3-9d46-47d0-97e5-3f3d1a5cc666))
-    (pin "2" (uuid 31e76688-8832-49ce-88d0-83b05d79fd9f))
-    (instances
-      (project "esprelay"
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R7") (unit 1)
+          (reference "#PWR031") (unit 1)
         )
       )
     )
@@ -3676,8 +3601,8 @@
 
   (symbol (lib_id "Device:R") (at 182.88 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
-    (uuid 59c7bfe6-e3b3-4f9a-b625-823a0b951e04)
-    (property "Reference" "R6" (at 181.61 80.01 90)
+    (uuid 568a3f7f-deb7-46fd-ab2d-3d1b38b78390)
+    (property "Reference" "R13" (at 181.61 80.01 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 182.88 76.2 90)
@@ -3689,12 +3614,38 @@
     (property "Datasheet" "~" (at 182.88 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (pin "1" (uuid 29d51eb3-9d46-47d0-97e5-3f3d1a5cc666))
+    (pin "2" (uuid 31e76688-8832-49ce-88d0-83b05d79fd9f))
+    (instances
+      (project "esprelay"
+        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
+          (reference "R13") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 180.34 73.66 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 59c7bfe6-e3b3-4f9a-b625-823a0b951e04)
+    (property "Reference" "R12" (at 179.07 80.01 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "10K" (at 180.34 76.2 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 178.562 73.66 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 180.34 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 631228dc-141b-422b-937d-e43bbec00681))
     (pin "2" (uuid db4889d2-098b-4e51-9f78-1ec6851f6e7b))
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R6") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -3709,7 +3660,7 @@
     (property "Value" "Jumper_2_Open" (at 74.93 110.49 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" (at 74.93 114.3 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 74.93 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 74.93 114.3 0)
@@ -3729,7 +3680,7 @@
   (symbol (lib_id "Device:R") (at 44.45 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 649f1f85-3987-4fa6-8424-3a410f9b9776)
-    (property "Reference" "R11" (at 39.37 30.48 0)
+    (property "Reference" "R1" (at 39.37 30.48 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 44.45 34.29 90)
@@ -3746,7 +3697,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R11") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -3755,7 +3706,7 @@
   (symbol (lib_id "power:GND") (at 63.5 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 653abc3e-f032-473b-a416-3c588fc617d4)
-    (property "Reference" "#PWR018" (at 63.5 110.49 0)
+    (property "Reference" "#PWR014" (at 63.5 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 63.5 109.22 0)
@@ -3771,62 +3722,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR018") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 255.27 127 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 65ffdbd4-dca1-42ed-b440-ade639162589)
-    (property "Reference" "H2" (at 257.81 124.4599 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MountingHole_Pad" (at 257.81 126.9999 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Footprint" "MountingHole:MountingHole_2.5mm_Pad_Via" (at 255.27 127 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 255.27 127 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 735df7c9-809a-421f-8dd3-8c049c03e14a))
-    (instances
-      (project "esprelay"
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "H2") (unit 1)
-        )
-      )
-      (project "opengeiger"
-        (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "H3") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 255.27 129.54 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 6789b7b9-3f50-4698-abec-7677e5e62ce3)
-    (property "Reference" "#PWR09" (at 255.27 135.89 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 255.27 134.62 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 255.27 129.54 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 255.27 129.54 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid e094e2a3-e93b-4073-8dcf-e7636db98d02))
-    (instances
-      (project "esprelay"
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -3835,7 +3731,7 @@
   (symbol (lib_id "power:+3.3V") (at 129.54 110.49 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6d10c7c1-7e24-4e1b-ad25-6400b83aa0f2)
-    (property "Reference" "#PWR022" (at 129.54 114.3 0)
+    (property "Reference" "#PWR024" (at 129.54 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 132.08 109.2199 0)
@@ -3851,7 +3747,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
       (project "opengeiger"
@@ -3865,7 +3761,7 @@
   (symbol (lib_id "Device:C") (at 63.5 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 71320f0d-e372-403e-85cf-316e766c4fc5)
-    (property "Reference" "C5" (at 67.31 125.7299 0)
+    (property "Reference" "C7" (at 67.31 125.7299 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22uF" (at 67.31 128.2699 0)
@@ -3891,7 +3787,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "C5") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
       (project "opengeiger"
@@ -3905,7 +3801,7 @@
   (symbol (lib_id "power:GND") (at 49.53 106.68 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 723ccf15-d9cc-4561-bb06-1786974058ad)
-    (property "Reference" "#PWR016" (at 49.53 113.03 0)
+    (property "Reference" "#PWR010" (at 49.53 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 49.53 111.76 0)
@@ -3921,7 +3817,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -3970,7 +3866,7 @@
   (symbol (lib_id "power:GND") (at 142.24 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 78655fea-dd8f-4466-9ba3-56c5bec444af)
-    (property "Reference" "#PWR025" (at 142.24 129.54 0)
+    (property "Reference" "#PWR028" (at 142.24 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 142.367 127.5842 0)
@@ -3986,7 +3882,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
       (project "parasite"
@@ -4000,7 +3896,7 @@
   (symbol (lib_id "power:+3.3V") (at 162.56 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7a852656-870b-4958-a971-9fcf4f7835b0)
-    (property "Reference" "#PWR034" (at 162.56 130.81 0)
+    (property "Reference" "#PWR029" (at 162.56 130.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 165.1 125.7299 0)
@@ -4016,7 +3912,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
       (project "opengeiger"
@@ -4030,7 +3926,7 @@
   (symbol (lib_id "power:+VDC") (at 20.32 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7b7fe02f-b885-45b1-a60f-7729da21a213)
-    (property "Reference" "#PWR014" (at 20.32 125.73 0)
+    (property "Reference" "#PWR02" (at 20.32 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+VDC" (at 20.32 115.57 0)
@@ -4046,62 +3942,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR014") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 246.38 129.54 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 7c606f0d-3bbc-4c1e-8e03-fb1c4672dd55)
-    (property "Reference" "#PWR04" (at 246.38 135.89 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 246.38 134.62 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 246.38 129.54 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 246.38 129.54 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid db7ec313-6fdd-4c27-bc8d-d8093db5f23b))
-    (instances
-      (project "esprelay"
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR04") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 246.38 114.3 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 7cadadb6-e8e8-454f-80dc-b1f0679ebd9a)
-    (property "Reference" "H3" (at 248.92 111.7599 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MountingHole_Pad" (at 248.92 114.2999 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Footprint" "MountingHole:MountingHole_2.5mm_Pad_Via" (at 246.38 114.3 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 246.38 114.3 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 965a5574-c4e9-4e24-8ac5-a18390b2860f))
-    (instances
-      (project "esprelay"
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "H3") (unit 1)
-        )
-      )
-      (project "opengeiger"
-        (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "H1") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -4110,7 +3951,7 @@
   (symbol (lib_id "Device:R") (at 104.14 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7fec09ab-04d8-4705-bd12-ef35ed1810f1)
-    (property "Reference" "R8" (at 102.87 115.57 90)
+    (property "Reference" "R4" (at 102.87 115.57 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 104.14 111.76 90)
@@ -4127,7 +3968,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R8") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -4136,7 +3977,7 @@
   (symbol (lib_id "power:+3.3V") (at 105.41 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 88e085a2-f547-469c-aa20-cffda775d163)
-    (property "Reference" "#PWR028" (at 105.41 107.95 0)
+    (property "Reference" "#PWR023" (at 105.41 107.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 107.95 102.8699 0)
@@ -4152,7 +3993,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
       (project "opengeiger"
@@ -4166,7 +4007,7 @@
   (symbol (lib_id "Device:R") (at 162.56 146.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8a9a9ce0-f5fa-42b6-943f-77f17b1d5334)
-    (property "Reference" "R10" (at 161.29 152.4 90)
+    (property "Reference" "R6" (at 161.29 152.4 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "470" (at 162.56 148.59 90)
@@ -4183,7 +4024,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R10") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -4224,7 +4065,7 @@
   (symbol (lib_id "Device:C") (at 74.93 100.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8c16d199-9d42-49e1-8f18-d156d284d899)
-    (property "Reference" "C11" (at 78.74 99.06 0)
+    (property "Reference" "C8" (at 78.74 99.06 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 78.74 101.6 0)
@@ -4250,7 +4091,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "C11") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
       (project "opengeiger"
@@ -4264,7 +4105,7 @@
   (symbol (lib_id "power:GND") (at 162.56 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8d0a3f6f-0049-440b-8e1e-bffd3213a39e)
-    (property "Reference" "#PWR027" (at 162.56 161.29 0)
+    (property "Reference" "#PWR030" (at 162.56 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 162.687 159.3342 0)
@@ -4280,7 +4121,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
       (project "parasite"
@@ -4291,35 +4132,10 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 255.27 116.84 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 8fc31581-9950-4480-ab0b-5dbd98bb5cf5)
-    (property "Reference" "#PWR011" (at 255.27 123.19 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 255.27 121.92 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 255.27 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 255.27 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 13dba24f-3fa3-4e94-ac81-f8efadff2bbb))
-    (instances
-      (project "esprelay"
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR011") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+3.3V") (at 80.01 114.3 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 971b5085-91d9-4c9d-a894-8a31037a49b0)
-    (property "Reference" "#PWR010" (at 76.2 114.3 0)
+    (property "Reference" "#PWR020" (at 76.2 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 83.82 114.3 90)
@@ -4335,7 +4151,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
       (project "opengeiger"
@@ -4346,10 +4162,35 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 116.84 53.34 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 98e288e0-f584-4a92-a33a-e8d2b2090b40)
+    (property "Reference" "#PWR043" (at 116.84 59.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 116.84 57.15 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "" (at 116.84 53.34 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 116.84 53.34 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid e3edbd17-30f5-40b7-be9f-94265eb9d74d))
+    (instances
+      (project "esprelay"
+        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
+          (reference "#PWR043") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "RF_Module:ESP-12F") (at 62.23 54.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 99495dea-90c4-413b-9b19-89af9d8a4c9f)
-    (property "Reference" "U1" (at 49.53 35.56 0)
+    (property "Reference" "U3" (at 49.53 35.56 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "ESP-12F" (at 74.93 35.56 0)
@@ -4386,7 +4227,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "U1") (unit 1)
+          (reference "U3") (unit 1)
         )
       )
     )
@@ -4395,7 +4236,7 @@
   (symbol (lib_id "Device:C") (at 74.93 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9f028b88-3bd3-4ff2-9223-01e476217a98)
-    (property "Reference" "C6" (at 78.74 125.73 0)
+    (property "Reference" "C9" (at 78.74 125.73 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 78.74 128.27 0)
@@ -4421,7 +4262,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "C6") (unit 1)
+          (reference "C9") (unit 1)
         )
       )
       (project "opengeiger"
@@ -4435,7 +4276,7 @@
   (symbol (lib_id "Connector:Conn_01x14_Pin") (at 191.77 135.89 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a061b409-3e79-4b16-aa5b-3e0adee8ac4d)
-    (property "Reference" "J1" (at 192.405 115.57 0)
+    (property "Reference" "J2" (at 192.405 115.57 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x14_Pin" (at 192.405 118.11 0)
@@ -4464,7 +4305,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "J1") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -4473,7 +4314,7 @@
   (symbol (lib_id "power:GND") (at 180.34 41.91 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a32af390-7247-4aa2-8aba-9484e8dd064a)
-    (property "Reference" "#PWR019" (at 186.69 41.91 0)
+    (property "Reference" "#PWR033" (at 186.69 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 184.15 41.91 90)
@@ -4489,7 +4330,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -4498,7 +4339,7 @@
   (symbol (lib_id "power:+3.3V") (at 44.45 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a729e574-af33-4a46-80ce-0f2249ca5e1e)
-    (property "Reference" "#PWR026" (at 44.45 31.75 0)
+    (property "Reference" "#PWR07" (at 44.45 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 46.99 26.6699 0)
@@ -4514,7 +4355,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
       (project "opengeiger"
@@ -4528,7 +4369,7 @@
   (symbol (lib_id "power:+3.3V") (at 78.74 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ad5cff32-fe88-475f-bb41-fd2a1afc4edb)
-    (property "Reference" "#PWR029" (at 78.74 31.75 0)
+    (property "Reference" "#PWR019" (at 78.74 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 81.28 26.6699 0)
@@ -4544,7 +4385,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
       (project "opengeiger"
@@ -4558,7 +4399,7 @@
   (symbol (lib_id "Device:C") (at 142.24 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ad8c50c2-304a-4bab-9b75-f19699048251)
-    (property "Reference" "C2" (at 146.05 118.11 0)
+    (property "Reference" "C10" (at 146.05 118.11 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 146.05 120.65 0)
@@ -4584,7 +4425,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "C2") (unit 1)
+          (reference "C10") (unit 1)
         )
       )
       (project "opengeiger"
@@ -4598,7 +4439,7 @@
   (symbol (lib_id "Device:C") (at 20.32 100.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid aee10880-c543-4e1b-a5ee-f92757dfd14d)
-    (property "Reference" "C7" (at 24.13 99.0599 0)
+    (property "Reference" "C1" (at 24.13 99.0599 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22uF" (at 24.13 101.5999 0)
@@ -4624,7 +4465,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "C7") (unit 1)
+          (reference "C1") (unit 1)
         )
       )
       (project "opengeiger"
@@ -4635,40 +4476,10 @@
     )
   )
 
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 246.38 127 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid b06fe0ce-0f96-46e0-a020-dd2c036a7422)
-    (property "Reference" "H1" (at 248.92 124.4599 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MountingHole_Pad" (at 236.22 130.81 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Footprint" "MountingHole:MountingHole_2.5mm" (at 246.38 127 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 246.38 127 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid cc780c8a-0fcc-4eae-b239-f87c5f05682b))
-    (instances
-      (project "esprelay"
-        (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "H1") (unit 1)
-        )
-      )
-      (project "opengeiger"
-        (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "H2") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Connector:Conn_01x06_Pin") (at 175.26 34.29 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b3660f84-a36b-4188-86f8-c6ea595ad9ac)
-    (property "Reference" "J2" (at 175.895 24.13 0)
+    (property "Reference" "J1" (at 175.895 24.13 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x06_Pin" (at 175.895 26.67 0)
@@ -4689,7 +4500,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "J2") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
     )
@@ -4698,7 +4509,7 @@
   (symbol (lib_id "power:VBUS") (at 92.71 152.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b566c1f9-23d6-48f0-b529-3fccf8b3926f)
-    (property "Reference" "#PWR0103" (at 92.71 156.21 0)
+    (property "Reference" "#PWR021" (at 92.71 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VBUS" (at 92.71 148.59 0)
@@ -4714,7 +4525,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR0103") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -4723,7 +4534,7 @@
   (symbol (lib_id "Device:R") (at 172.72 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b677e186-5f62-4a91-aa06-e5c9a1bfb1f1)
-    (property "Reference" "R2" (at 171.45 80.01 90)
+    (property "Reference" "R8" (at 171.45 80.01 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 172.72 76.2 90)
@@ -4740,7 +4551,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R2") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -4749,7 +4560,7 @@
   (symbol (lib_id "power:+3.3V") (at 102.87 44.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b8e7bb48-784d-4c2c-a840-e98d25593331)
-    (property "Reference" "#PWR035" (at 102.87 48.26 0)
+    (property "Reference" "#PWR022" (at 102.87 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 102.87 39.37 0)
@@ -4765,7 +4576,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
       (project "opengeiger"
@@ -4779,7 +4590,7 @@
   (symbol (lib_id "Device:R") (at 107.95 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bf82f465-4501-4566-9a80-30f472a944e6)
-    (property "Reference" "R9" (at 106.68 115.57 90)
+    (property "Reference" "R5" (at 106.68 115.57 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 107.95 111.76 90)
@@ -4796,7 +4607,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R9") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -4805,7 +4616,7 @@
   (symbol (lib_id "power:GND") (at 196.85 151.13 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bfe6c7c0-82c5-4665-9b35-ef871b48362f)
-    (property "Reference" "#PWR037" (at 203.2 151.13 0)
+    (property "Reference" "#PWR034" (at 203.2 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 200.66 151.13 90)
@@ -4821,7 +4632,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR034") (unit 1)
         )
       )
     )
@@ -4830,7 +4641,7 @@
   (symbol (lib_id "Device:R") (at 170.18 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c2ce63a0-1aa3-477e-9f84-7120208051c9)
-    (property "Reference" "R1" (at 168.91 80.01 90)
+    (property "Reference" "R7" (at 168.91 80.01 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 170.18 76.2 90)
@@ -4847,7 +4658,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R1") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -4856,7 +4667,7 @@
   (symbol (lib_id "Regulator_Linear:SPX3819M5-L-3-3") (at 49.53 125.73 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c602e2e4-43ce-42b3-b1d8-12c4f60f6c1d)
-    (property "Reference" "U5" (at 49.53 116.84 0)
+    (property "Reference" "U2" (at 49.53 116.84 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SPX3819M5-L-3-3" (at 49.53 119.38 0)
@@ -4876,7 +4687,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "U5") (unit 1)
+          (reference "U2") (unit 1)
         )
       )
     )
@@ -4885,7 +4696,7 @@
   (symbol (lib_id "Mechanical:Fiducial") (at 252.73 146.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ccd639e4-a82b-4874-90e6-595203824aed)
-    (property "Reference" "FID2" (at 255.27 144.7799 0)
+    (property "Reference" "FID3" (at 255.27 144.7799 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Fiducial" (at 255.27 147.3199 0)
@@ -4900,7 +4711,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "FID2") (unit 1)
+          (reference "FID3") (unit 1)
         )
       )
       (project "opengeiger"
@@ -4914,7 +4725,7 @@
   (symbol (lib_id "power:GND") (at 129.54 129.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ce96b720-add7-4d6e-b356-e2f12348ad76)
-    (property "Reference" "#PWR024" (at 129.54 135.89 0)
+    (property "Reference" "#PWR025" (at 129.54 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 129.667 133.9342 0)
@@ -4930,7 +4741,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
       (project "parasite"
@@ -4944,7 +4755,7 @@
   (symbol (lib_id "power:+VDC") (at 205.74 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cec9245d-603d-4230-9fac-3d5b1660d607)
-    (property "Reference" "#PWR017" (at 205.74 123.19 0)
+    (property "Reference" "#PWR037" (at 205.74 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+VDC" (at 205.74 113.03 0)
@@ -4960,7 +4771,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR037") (unit 1)
         )
       )
     )
@@ -4969,7 +4780,7 @@
   (symbol (lib_id "power:+3.3V") (at 29.21 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d4f15f46-a24a-447d-9ea2-4773be25eae8)
-    (property "Reference" "#PWR031" (at 29.21 31.75 0)
+    (property "Reference" "#PWR03" (at 29.21 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 31.75 26.6699 0)
@@ -4985,7 +4796,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
       (project "opengeiger"
@@ -4999,7 +4810,7 @@
   (symbol (lib_id "Transistor_Array:ULN2003A") (at 237.49 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d7033b61-d63f-4fd1-8fcf-5b5060e494a5)
-    (property "Reference" "U2" (at 237.49 62.23 0)
+    (property "Reference" "U5" (at 237.49 62.23 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ULN2003A" (at 237.49 64.77 0)
@@ -5030,37 +4841,36 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "U2") (unit 1)
+          (reference "U5") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 255.27 114.3 0) (unit 1)
+  (symbol (lib_id "Switch:SW_SPST") (at 116.84 48.26 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid db7bf46a-5dd2-4aac-9e38-dc413ca03c2f)
-    (property "Reference" "H4" (at 257.81 111.7599 0)
-      (effects (font (size 1.27 1.27)) (justify left))
+    (uuid d8ada154-88b5-433c-bb84-bfc1c57e37ee)
+    (property "Reference" "SW1" (at 123.19 48.26 0)
+      (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "MountingHole_Pad" (at 257.81 114.2999 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
+    (property "Value" "SW_SPST" (at 120.65 48.26 0)
+      (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.5mm" (at 255.27 114.3 0)
+    (property "Footprint" "Button_Switch_SMD:SW_SPST_B3U-1000P" (at 116.84 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 255.27 114.3 0)
+    (property "Datasheet" "~" (at 116.84 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 82a8050c-51dc-40bb-8827-1f97ed7656e7))
+    (property "LSC" "C231329" (at 116.84 48.26 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid d980afc2-59a8-431f-abaf-2480d058c64e))
+    (pin "2" (uuid 194a50a2-e6fc-4198-99f6-f3f1659e6c00))
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "H4") (unit 1)
-        )
-      )
-      (project "opengeiger"
-        (path "/8a0213a9-e710-4867-a1ff-72258b44c96e"
-          (reference "H4") (unit 1)
+          (reference "SW1") (unit 1)
         )
       )
     )
@@ -5069,7 +4879,7 @@
   (symbol (lib_id "power:+3.3V") (at 62.23 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dba1700c-8c40-427b-b2ed-c3d1182232d1)
-    (property "Reference" "#PWR030" (at 62.23 31.75 0)
+    (property "Reference" "#PWR012" (at 62.23 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 64.77 26.6699 0)
@@ -5085,7 +4895,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
       (project "opengeiger"
@@ -5099,7 +4909,7 @@
   (symbol (lib_id "Device:C") (at 34.29 100.33 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid df2d36c0-e77d-417c-b597-d3f38148c834)
-    (property "Reference" "C8" (at 38.1 99.06 0)
+    (property "Reference" "C4" (at 38.1 99.06 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "0.1uF" (at 38.1 101.6 0)
@@ -5125,7 +4935,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "C8") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
       (project "opengeiger"
@@ -5139,7 +4949,7 @@
   (symbol (lib_id "power:GND") (at 63.5 130.81 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e0343a88-e7df-4419-9fe1-194308cfdd65)
-    (property "Reference" "#PWR012" (at 63.5 137.16 0)
+    (property "Reference" "#PWR015" (at 63.5 137.16 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 63.5 135.89 0)
@@ -5155,7 +4965,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -5164,7 +4974,7 @@
   (symbol (lib_id "Device:R") (at 78.74 34.29 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e0a54e7d-09ed-4c9e-b1e2-c49d95021016)
-    (property "Reference" "R12" (at 73.66 33.02 0)
+    (property "Reference" "R2" (at 73.66 33.02 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 78.74 36.83 90)
@@ -5181,7 +4991,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R12") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -5190,7 +5000,7 @@
   (symbol (lib_id "power:VBUS") (at 74.93 96.52 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e3cae6e0-b336-4ec8-97c3-f6a6a611b2a6)
-    (property "Reference" "#PWR0104" (at 74.93 100.33 0)
+    (property "Reference" "#PWR017" (at 74.93 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VBUS" (at 74.93 92.71 0)
@@ -5206,7 +5016,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "#PWR0104") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -5215,7 +5025,7 @@
   (symbol (lib_id "Device:R") (at 95.25 44.45 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e7dc214f-8fa4-4518-b8a9-6d2bde2507e2)
-    (property "Reference" "R13" (at 97.79 41.91 90)
+    (property "Reference" "R3" (at 97.79 41.91 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 97.79 44.45 90)
@@ -5232,7 +5042,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "R13") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -5298,7 +5108,7 @@
   (symbol (lib_id "Diode:1N4148WS") (at 85.09 152.4 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f2981f82-ffe9-4e05-b968-d0c45fb27351)
-    (property "Reference" "D1" (at 85.09 146.05 0)
+    (property "Reference" "D2" (at 85.09 146.05 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1N4148WS" (at 85.09 148.59 0)
@@ -5321,7 +5131,7 @@
     (instances
       (project "esprelay"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"
-          (reference "D1") (unit 1)
+          (reference "D2") (unit 1)
         )
       )
     )

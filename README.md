@@ -4,7 +4,7 @@
 ESP8266 small signal relay module utilizing an [ESP-12-F](./DOCUMENTATION/esp-12f_product_specification_en.pdf) wifi module for communication and MCU,it has a [SHTC3 ](./DOCUMENTATION/Datasheet_SHTC3.pdf) temp sensor, [light sensing diode](./DOCUMENTATION/1806131537_Everlight-Elec-ALS-PT19-315C-L177-TR8_C146233.pdf), and has two 2.5-30V inputs, and a single 25v, 100ma high speed open drain output through a [TBD062003](./DOCUMENTATION/2304140030_TOSHIBA-TBD62003AFWG_C114084.pdf) darlington transistor array ic. The three relay outputs are capable of driving around 25V 500ma. 
 
 
-Thanks to [u/PricelessToolkit/ESPClicker](https://github.com/PricelessToolkit/ESPClicker) for inspiration. If you need a ready to use product you should so head over to his store and buy his version.
+Thanks to [u/PricelessToolkit/ESPClicker](https://github.com/PricelessToolkit/ESPClicker) for inspiration. If you need a ready to use product you should so head over to his [store](https://www.pricelesstoolkit.com/en/projects/32-espclicker-0741049314405.html) and buy his version.
 
 [Schematic](./DOCUMENTATION/_schematic.pdf)
 
@@ -23,8 +23,8 @@ Thanks to [u/PricelessToolkit/ESPClicker](https://github.com/PricelessToolkit/ES
 | _Case size_     | XxXxXmm TBD                                                         |
 
 ## Connector
-| **Pin**   | **GPIO**|**Description**                                                     |
-|------------|-----|---------------------------------------------------------------------|
+| **Pin**   | **GPIO**|**Description**       |
+|------------|-----|-------------------------|
 |_vcc_ | -|5-15v |
 |_GND_ | -|  Ground  |
 |_HI1_ | GPIO4 | 2.5-30v input |
@@ -41,7 +41,7 @@ Thanks to [u/PricelessToolkit/ESPClicker](https://github.com/PricelessToolkit/ES
 
 ## PCB Pictures
 ![Front](./PICTURES/OTOP.PNG)
-![Back](./PICTURES/OLEFT.PNG)
+![Side](./PICTURES/OLEFT.png)
 ![Back](./PICTURES/OBOT.PNG)
 
 ## Homeassistant Implementation

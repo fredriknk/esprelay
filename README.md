@@ -1,7 +1,7 @@
-﻿# ESPRELAY -_WORK IN PROGRESS-UNTESTED_-
+# ESPRELAY -_WORK IN PROGRESS-UNTESTED_-
 ![Front](./PICTURES/TOP.PNG)
 
-ESP8266 small signal relay module utilizing an [ESP-12-F](./DOCUMENTATION/esp-12f_product_specification_en.pdf) wifi module for communication and MCU,it has a [SHTC3 ](./DOCUMENTATION/Datasheet_SHTC3.pdf) temp sensor, [light sensing diode](./DOCUMENTATION/1806131537_Everlight-Elec-ALS-PT19-315C-L177-TR8_C146233.pdf), and has two 2.5-25V inputs, and a single 25v, 100ma high speed open drain output through a [TBD062003](./DOCUMENTATION/2304140030_TOSHIBA-TBD62003AFWG_C114084.pdf) DMOS transistor array ic. The three relay outputs are capable of driving around 25V 500ma. 
+ESP8266 small signal relay module utilizing an [ESP-12-F](./DOCUMENTATION/esp-12f_product_specification_en.pdf) wifi module for communication and MCU, and has two 2.5-25V inputs, and a single 25v, 100ma high speed open drain output through a [TBD062003](./DOCUMENTATION/2304140030_TOSHIBA-TBD62003AFWG_C114084.pdf) DMOS transistor array ic. The three relay outputs are capable of driving around 25V 500ma. 
 
 
 Thanks to [u/PricelessToolkit/ESPClicker](https://github.com/PricelessToolkit/ESPClicker) for inspiration. If you need a ready to use product you should so head over to his [store](https://www.pricelesstoolkit.com/en/projects/32-espclicker-0741049314405.html) and buy his version.
